@@ -1,4 +1,4 @@
-package com.lumen.social.domain.catalog;
+package com.lumen.social.domain.video;
 
 import com.lumen.social.domain.social.User;
 import jakarta.persistence.*;

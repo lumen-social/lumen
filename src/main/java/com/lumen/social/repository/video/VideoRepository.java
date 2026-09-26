@@ -1,6 +1,6 @@
-package com.lumen.social.repository.catalog;
+package com.lumen.social.repository.video;
 
-import com.lumen.social.domain.catalog.Video;
+import com.lumen.social.domain.video.Video;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

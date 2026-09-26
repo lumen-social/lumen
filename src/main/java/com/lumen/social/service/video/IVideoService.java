@@ -1,4 +1,4 @@
-package com.lumen.social.service.catalog;
+package com.lumen.social.service.video;
 
 import com.lumen.social.controller.dto.catalog.VideoRequest;
 import com.lumen.social.controller.dto.catalog.VideoResponse;

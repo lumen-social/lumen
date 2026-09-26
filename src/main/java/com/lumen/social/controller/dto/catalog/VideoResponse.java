@@ -1,7 +1,6 @@
 package com.lumen.social.controller.dto.catalog;
 
-import com.lumen.social.domain.catalog.Video;
-import jakarta.validation.constraints.NotBlank;
+import com.lumen.social.domain.video.Video;
 
 import java.util.UUID;
 

@@ -1,10 +1,10 @@
-package com.lumen.social.service.catalog;
+package com.lumen.social.service.video;
 
 import com.lumen.social.controller.dto.catalog.VideoRequest;
 import com.lumen.social.controller.dto.catalog.VideoResponse;
-import com.lumen.social.domain.catalog.Video;
+import com.lumen.social.domain.video.Video;
 import com.lumen.social.domain.social.User;
-import com.lumen.social.repository.catalog.VideoRepository;
+import com.lumen.social.repository.video.VideoRepository;
 import com.lumen.social.repository.social.user.UserRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -34,7 +34,6 @@ public class VideoService implements IVideoService {
                 request.priceCredits(),
                 author
         );
-
         videoRepository.save(video);
 
         return new VideoResponse(video);

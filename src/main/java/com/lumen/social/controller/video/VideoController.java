@@ -1,8 +1,8 @@
-package com.lumen.social.controller.catalog;
+package com.lumen.social.controller.video;
 
 import com.lumen.social.controller.dto.catalog.VideoRequest;
 import com.lumen.social.controller.dto.catalog.VideoResponse;
-import com.lumen.social.service.catalog.VideoService;
+import com.lumen.social.service.video.VideoService;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
