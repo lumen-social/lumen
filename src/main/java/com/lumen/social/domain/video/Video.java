@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.UUID;
 
@@ -33,7 +34,7 @@ public class Video {
     private boolean isPremium;
 
     @Column(name = "price_credits")
-    private Integer priceCredits;
+    private BigDecimal priceCredits;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
@@ -47,7 +48,7 @@ public class Video {
         this.createdAt = Instant.now();
     }
 
-    public Video(String title, String description, String url, boolean isPremium, Integer priceCredits, User author) {
+    public Video(String title, String description, String url, boolean isPremium, BigDecimal priceCredits, User author) {
         this.title = title;
         this.description = description;
         this.url = url;
