@@ -33,8 +33,14 @@ public class Video {
     @Column(name = "is_premium", nullable = false)
     private boolean isPremium;
 
-    @Column(name = "price_credits")
-    private BigDecimal priceCredits;
+    @Column(name = "purchase_price_credits")
+    private BigDecimal purchasePriceCredits;
+
+    @Column(name = "rental_price_credits")
+    private BigDecimal rentalPriceCredits;
+
+    @Column(name = "rental_duration_hours")
+    private Integer rentalDurantionHours;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
@@ -48,12 +54,14 @@ public class Video {
         this.createdAt = Instant.now();
     }
 
-    public Video(String title, String description, String url, boolean isPremium, BigDecimal priceCredits, User author) {
+    public Video(String title, String description, String url, boolean isPremium, BigDecimal purchasePriceCredits, BigDecimal rentalPriceCredits, Integer rentalDurantionHours, User author) {
         this.title = title;
         this.description = description;
         this.url = url;
         this.isPremium = isPremium;
-        this.priceCredits = priceCredits;
+        this.purchasePriceCredits = purchasePriceCredits;
+        this.rentalPriceCredits = rentalPriceCredits;
+        this.rentalDurantionHours = rentalDurantionHours;
         this.author = author;
     }
 }

@@ -8,6 +8,7 @@ import com.lumen.social.exception.pay.TransactionInvalidException;
 import com.lumen.social.exception.pay.WalletNotFoundException;
 import com.lumen.social.repository.pay.TransactionRepository;
 import com.lumen.social.repository.pay.WalletRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -36,7 +37,6 @@ public class WalletService implements IWalletService {
 
         return new DepositResponseDto(wallet);
     }
-
 
     @Override
     public Wallet debit(UUID userId, BigDecimal amount, String description, UUID relatedVideoId) {

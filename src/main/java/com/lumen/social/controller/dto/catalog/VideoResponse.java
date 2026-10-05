@@ -2,15 +2,19 @@ package com.lumen.social.controller.dto.catalog;
 
 import com.lumen.social.domain.video.Video;
 
+import java.math.BigDecimal;
+import java.time.Instant;
 import java.util.UUID;
 
 public record VideoResponse(
     UUID id,
     String title,
     String description,
-    String url,
     boolean premium,
-    Integer priceCredits
+    BigDecimal purchasePriceCredits,
+    BigDecimal rentalPriceCredits,
+    String authorName,
+    Instant createdAt
 ) {
 
     public VideoResponse(Video video) {
@@ -18,8 +22,11 @@ public record VideoResponse(
                 video.getId(),
                 video.getTitle(),
                 video.getDescription(),
-                video.getUrl(), video.isPremium(),
-                video.getPriceCredits()
+                video.isPremium(),
+                video.getPurchasePriceCredits(),
+                video.getRentalPriceCredits(),
+                video.getAuthor().getName(),
+                video.getCreatedAt()
         );
     }
 }

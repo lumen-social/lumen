@@ -8,7 +8,9 @@ public record VideoRequest(
     @NotBlank String title,
     @NotBlank String description,
     @NotBlank String url,
-    Boolean premium,
-    BigDecimal priceCredits
-) {
+    boolean premium,
+    BigDecimal purchasePriceCredits,
+    BigDecimal rentalPriceCredits,
+    Integer rentalDurationHours
+    ) {
 }

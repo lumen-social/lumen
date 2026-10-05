@@ -31,7 +31,9 @@ public class VideoService implements IVideoService {
                 request.description(),
                 request.url(),
                 request.premium(),
-                request.priceCredits(),
+                request.purchasePriceCredits(),
+                request.rentalPriceCredits(),
+                request.rentalDurationHours(),
                 author
         );
         videoRepository.save(video);

@@ -1,4 +1,4 @@
-package br.com.lumen.wallet;
+package com.lumen.social.controller.video;
 
 import com.lumen.social.service.video.VideoPurchaseService;
 import org.springframework.http.ResponseEntity;
@@ -18,8 +18,9 @@ class VideoPurchaseController {
     }
 
     @PostMapping
-    public ResponseEntity<Void> unlock(@PathVariable UUID videoId, Authentication auth) {
-        videoPurchaseService.unlock(videoId, (String) auth.getPrincipal());
+    public ResponseEntity<Void> unlock(@PathVariable UUID videoId, String buyerEmail, @RequestBody AccessType type) {
+        // Voltei para buyerEmail no lugar do auth.getPrincipal por enquanto.
+        videoPurchaseService.unlock(videoId, buyerEmail, type);
         return ResponseEntity.ok().build();
     }
 }
